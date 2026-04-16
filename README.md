@@ -255,10 +255,6 @@ alembic upgrade head
 - [ ] Fine management system
 - [ ] Email notifications
 
-## License
-
-MIT License
-
 ## Author
 
 Created for learning purpose as part of a project-based learning curriculum.
