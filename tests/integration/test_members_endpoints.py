@@ -13,8 +13,8 @@ class TestMembersEndpoints:
         response = client.post(
             "/members/",
             json={
-                "name": "John Doe",
-                "email": "john@example.com",
+                "name": "Taher",
+                "email": "taher@example.com",
                 "phone": "+1-555-0123",
                 "address": "123 Main St"
             }
@@ -22,7 +22,7 @@ class TestMembersEndpoints:
         
         assert response.status_code == 201
         data = response.json()
-        assert data["name"] == "John Doe"
+        assert data["name"] == "Taher"
         assert data["is_active"] is True
     
     def test_create_member_duplicate_email(self, client: TestClient, sample_member: Member):

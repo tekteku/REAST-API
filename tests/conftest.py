@@ -72,8 +72,8 @@ def sample_book(db: Session):
 def sample_member(db: Session):
     """Create a sample member for testing."""
     member = Member(
-        name="John Doe",
-        email="john@example.com",
+        name="Taher",
+        email="taher@example.com",
         phone="+1-555-0123",
         address="123 Main St, Anytown, USA",
         is_active=True

@@ -197,8 +197,8 @@ curl -X POST "http://localhost:8000/books" \
 curl -X POST "http://localhost:8000/members" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "John Doe",
-    "email": "john@example.com",
+    "name": "Taher",
+    "email": "taher@example.com",
     "phone": "+1-555-0123",
     "address": "123 Main St, Anytown, USA"
   }'
