@@ -4,8 +4,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
 from app.database import engine, Base
-from app.models import Book, Member, Loan
-from app.routers import books, members, loans
+from app.models import Book, Member, Loan, User
+from app.routers import books, members, loans, auth
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -17,7 +17,7 @@ Base.metadata.create_all(bind=engine)
 # Initialize FastAPI app
 app = FastAPI(
     title="Library REST API",
-    description="A REST API for managing library books, members, and loans",
+    description="A REST API for managing library books, members, and loans with JWT authentication",
     version="1.0.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc"
@@ -42,6 +42,7 @@ app.add_middleware(
 )
 
 # Include routers
+app.include_router(auth.router)
 app.include_router(books.router)
 app.include_router(members.router)
 app.include_router(loans.router)
