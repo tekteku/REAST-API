@@ -15,7 +15,7 @@ class TestMemberRepository:
         repo = MemberRepository(db)
         member_data = MemberCreate(
             name="Taher",
-            email="taher@example.com",
+            email="taherch2025@gmail.com",
             phone="+1-555-0123",
             address="123 Main St"
         )
@@ -24,7 +24,7 @@ class TestMemberRepository:
         
         assert member.id is not None
         assert member.name == "Taher"
-        assert member.email == "taher@example.com"
+        assert member.email == "taherch2025@gmail.com"
         assert member.is_active is True
     
     def test_get_member(self, db: Session, sample_member: Member):
